@@ -28,8 +28,8 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     while True:
-      month = input('\nWhich month would you like to see data for? Please enter either January, February, March, April, May, or June.\nType the word all if you want to see data for all.\nType the option exactly as you see it with no extra spaces.\n')
-      if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'all'):
+      month = input('\nWhich month would you like to see data for? Please enter either january, february, march, april, may, or june.\nType the word all if you want to see data for all.\nType the option exactly as you see it with no extra spaces.\n')
+      if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
         print('Please try again. Remember to type the option exactly as you see it with no spaces!')
         continue
       else:
@@ -64,7 +64,7 @@ def load_data(city, month, day):
     df['day_of_week'] = df['Start Time'].dt.day_name()
 
     if month != 'all':
-        months = ['January', 'February', 'March', 'April', 'May', 'June']
+        months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
         df = df[df['month'] == month]
 
